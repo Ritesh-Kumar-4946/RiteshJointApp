@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <!-- Right or left Menu Panel -->
+
+    <FrameLayout
+        android:id="@+id/menuPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </FrameLayout>
+
+    <!-- Main Panel -->
+
+    <!-- start -->
+    <LinearLayout
+        android:id="@+id/slidingPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:gravity="left"
+        android:orientation="vertical">
+
+        <!--toolbar (Start)-->
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bluecolor">
+
+            <!--layout for left menu (start)-->
+            <RelativeLayout
+                android:id="@+id/rl_leftmenu"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/menuViewButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:src="@drawable/ic_leftmenu_open" />
+
+            </RelativeLayout>
+            <!--layout for left menu (End)-->
+
+            <!--layout for Right like Button (start)-->
+            <RelativeLayout
+                android:id="@+id/rl_rightlike"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:id="@+id/likebutton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:src="@drawable/ic_like" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/likebutton"
+                    android:text="like 600"
+                    android:textColor="@color/textcolor"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+            <!--layout for Right like Button (End)-->
+
+        </RelativeLayout>
+        <!--toolbar (End)-->
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header">
+
+            <!--Relative layout main content (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_content_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--progressbar for data (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_dataprogressbar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true">
+
+                    <ProgressBar
+                        android:id="@+id/dataprogressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progressDrawable="@drawable/circular_progress_bar" />
+
+                </RelativeLayout>
+                <!--progressbar for data (End)-->
+
+                <LinearLayout
+                    android:id="@+id/slidingPanel1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/white"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <!--Relative layout for cover page (Start)-->
+                    <RelativeLayout
+                        android:id="@+id/rl_coverphoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@id/header">
+
+                        <ImageView
+                            android:id="@+id/iv_coverbg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ic_coverbg"
+                            android:scaleType="fitXY" />
+
+                        <!--progressbar for cover image (Start)-->
+                        <RelativeLayout
+                            android:id="@+id/rl_coverprogressbar"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp">
+
+                            <ProgressBar
+                                android:id="@+id/coverprogressbar"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:indeterminate="false"
+                                android:max="100"
+                                android:progressDrawable="@drawable/circular_progress_bar" />
+
+                        </RelativeLayout>
+                        <!--progressbar for cover image (End)-->
+
+                    </RelativeLayout>
+                    <!--Relative layout for cover page (Start)-->
+
+                    <!--Relative Layout for profile image (Start)-->
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="-70dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profileimg"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_avtar_f" />
+
+                        <!--progressbar for profile image (Start)-->
+                        <RelativeLayout
+                            android:id="@+id/rl_profileprogressbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp">
+
+                            <ProgressBar
+                                android:id="@+id/profileprogressbar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:indeterminate="false"
+                                android:max="100"
+                                android:progressDrawable="@drawable/circular_progress_bar" />
+
+                        </RelativeLayout>
+                        <!--progressbar for profile image (End)-->
+
+                        <!--<ProgressBar
+                            android:id="@+id/progressBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"/>-->
+
+                    </RelativeLayout>
+                    <!--Relative Layout for profile image (End)-->
+
+                    <!--Relative layout for JointsMe button (Start)-->
+                    <!--<RelativeLayout
+                        android:id="@+id/rl_tipme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="-40dp">
+
+                        <TextView
+                            android:id="@+id/tv_tipme"
+                            android:layout_width="90dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/btn_login"
+                            android:background="@drawable/rounded_rectangle"
+                            android:gravity="center"
+                            android:text="TIP ME!"
+                            android:textColor="@color/textcolor"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>-->
+                    <!--Relative layout for JointsMe button (End)-->
+
+                    <!--Relative layout for JointsMe button (Start)-->
+                    <RelativeLayout
+                        android:id="@+id/rl_editprofiletext"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="-10dp"
+                        android:background="@drawable/ic_editprofiletext">
+
+                    </RelativeLayout>
+                    <!--Relative layout for JointsMe button (End)-->
+
+                    <!--Relaout layout for main scroll (Start)-->
+                    <RelativeLayout
+                        android:id="@+id/rl_userlayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--Relative layout name (Start)-->
+                        <RelativeLayout
+                            android:id="@+id/rl_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp">
+
+                            <!--only name (Start)-->
+                            <RelativeLayout
+                                android:id="@+id/rl_names"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Name :"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/bluecolor"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+                            <!--only name (End)-->
+
+                            <!--only user name (Start)-->
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_toRightOf="@id/rl_names"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:id="@+id/tv_username"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="center"
+                                    android:text="User Name"
+                                    android:textColor="@color/textuser"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+                            <!--only user name (End)-->
+
+                        </RelativeLayout>
+                        <!--Relative layout name (End)-->
+
+                        <!--Relative layout jointsid (Start)-->
+                        <RelativeLayout
+                            android:id="@+id/rl_jointsid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rl_name"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp">
+
+                            <!--only name (Start)-->
+                            <RelativeLayout
+                                android:id="@+id/rl_jointsids"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="TIPME ID :"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/bluecolor"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+                            <!--only name (End)-->
+
+                            <!--only user name (Start)-->
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:padding="5dp">
+
+                                <TextView
+
+                                    android:id="@+id/tv_jointsid"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="center"
+                                    android:text="User TIPME ID"
+                                    android:textColor="@color/textuser"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+                            <!--only user name (End)-->
+
+                        </RelativeLayout>
+                        <!--Relative layout jointsid (End)-->
+
+                        <!--Relative layout mobilenumber (Start)-->
+                        <RelativeLayout
+                            android:id="@+id/rl_mobilenumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rl_jointsid"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp">
+
+                            <!--only name (Start)-->
+                            <RelativeLayout
+                                android:id="@+id/rl_mobilenumbers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mobile Number :"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/bluecolor"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+                            <!--only name (End)-->
+
+                            <!--only user name (Start)-->
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:id="@+id/tv_mobilenumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="center"
+                                    android:text="User Mobile Number"
+                                    android:textColor="@color/textuser"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+                            <!--only user name (End)-->
+
+                        </RelativeLayout>
+                        <!--Relative layout mobilenumber (End)-->
+
+                        <!--Relative layout address (Start)-->
+                        <RelativeLayout
+                            android:id="@+id/rl_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rl_mobilenumber"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp">
+
+                            <!--only name (Start)-->
+                            <RelativeLayout
+                                android:id="@+id/rl_addresss"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address :"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/bluecolor"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+                            <!--only name (End)-->
+
+                            <!--only user name (Start)-->
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:id="@+id/tv_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="center"
+                                    android:text="User Address"
+                                    android:textColor="@color/textuser"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+                            <!--only user name (End)-->
+
+                        </RelativeLayout>
+                        <!--Relative layout address (End)-->
+
+                        <!--Relative layout Line of Work (Start)-->
+                        <RelativeLayout
+                            android:id="@+id/rl_lineofwork"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rl_address"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp">
+
+                            <!--only name (Start)-->
+                            <RelativeLayout
+                                android:id="@+id/rl_lineofworks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Line of Work :"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/bluecolor"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+                            <!--only name (End)-->
+
+                            <!--only user name (Start)-->
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:id="@+id/tv_lineofwork"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="center"
+                                    android:text="User Line of Work"
+                                    android:textColor="@color/textuser"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+                            <!--only user name (End)-->
+
+                        </RelativeLayout>
+                        <!--Relative layout Line of Work (End)-->
+
+                        <!--Relative layout placeofwork (Start)-->
+                        <RelativeLayout
+                            android:id="@+id/rl_placeofwork"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rl_lineofwork"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp">
+
+                            <!--only name (Start)-->
+                            <RelativeLayout
+                                android:id="@+id/rl_placeofworks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Place of Work :"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/bluecolor"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+                            <!--only name (End)-->
+
+                            <!--only user name (Start)-->
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@id/rl_placeofworks"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:id="@+id/tv_placeofwork"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="left"
+                                    android:text="User Place Of Work"
+                                    android:textColor="@color/textuser"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+                            <!--only user name (End)-->
+
+                        </RelativeLayout>
+                        <!--Relative layout placeofwork (End)-->
+
+                        <!--Relative layout mystory (Start)-->
+                        <RelativeLayout
+                            android:id="@+id/rl_mystory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rl_placeofwork"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp">
+
+                            <!--only name (Start)-->
+                            <RelativeLayout
+                                android:id="@+id/rl_mystorys"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="My Story :"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/bluecolor"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+                            <!--only name (End)-->
+
+                            <!--only user name (Start)-->
+                            <!--<RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_toRightOf="@id/rl_mystorys"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:id="@+id/tv_mystory"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="left"
+                                    android:text="User Story"
+                                    android:textColor="@color/textuser"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>-->
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_toRightOf="@id/rl_mystorys"
+                                android:background="?android:selectableItemBackground"
+                                android:clipToPadding="false"
+                                android:padding="5dp">
+
+                                <!--        <TextView
+                                            android:id="@+id/tv_mystory"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:background="@drawable/mystory_selector"
+                                            android:clickable="true"
+                                            android:elevation="10dp"
+                                            android:gravity="left"
+                                            android:outlineProvider="bounds"
+                                            android:shadowColor="#000000"
+                                            android:shadowDx="2"
+                                            android:shadowDy="2"
+                                            android:shadowRadius="2"
+                                            android:text="USER STORY"
+                                            android:textColor="@color/textblack"
+                                            android:textSize="13sp" />-->
+
+                                <TextView
+                                    android:id="@+id/tv_mystory"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:clickable="true"
+                                    android:elevation="10dp"
+                                    android:gravity="start"
+                                    android:outlineProvider="bounds"
+                                    android:shadowColor="#000000"
+                                    android:shadowDx="2"
+                                    android:shadowDy="2"
+                                    android:shadowRadius="2"
+                                    android:text="USER STORY"
+                                    android:textColor="@color/textblack"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+                            <!--only user name (End)-->
+
+                        </RelativeLayout>
+                        <!--Relative layout mystory (End)-->
+
+                        <!--Relative layout goals/aspiration (Start)-->
+                        <RelativeLayout
+                            android:id="@+id/goal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rl_mystory"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp">
+
+                            <!--only name (Start)-->
+                            <RelativeLayout
+                                android:id="@+id/rl_goals"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="Goals/Aspirations :"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/bluecolor"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+                            <!--only name (End)-->
+
+                            <!--only user name (Start)-->
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:layout_toRightOf="@id/rl_goals"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:id="@+id/tv_goal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="left"
+                                    android:text="User Goals/Aspirations"
+                                    android:textColor="@color/textuser"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+                            <!--only user name (End)-->
+
+                        </RelativeLayout>
+                        <!--Relative layout goals/aspiration (End)-->
+
+                        <!--Relative layout websites (Start)-->
+                        <RelativeLayout
+                            android:id="@+id/website"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/goal"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp">
+
+                            <!--only name (Start)-->
+                            <RelativeLayout
+                                android:id="@+id/rl_websites"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="10dp"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="Website (s) :"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/bluecolor"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+                            <!--only name (End)-->
+
+                            <!--only user name (Start)-->
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_toRightOf="@id/rl_websites"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:id="@+id/tv_websites"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="left"
+                                    android:text="User Web Sites"
+                                    android:textColor="@color/textuser"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+                            <!--only user name (End)-->
+
+                        </RelativeLayout>
+                        <!--Relative layout websites (End)-->
+
+                        <!--Relative layout videos (Start)-->
+                        <!-- <RelativeLayout
+                             android:id="@+id/videos"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_below="@id/website"
+                             android:layout_marginTop="10dp"
+                             android:padding="5dp">
+
+                             &lt;!&ndash;only name (Start)&ndash;&gt;
+                             <RelativeLayout
+                                 android:id="@+id/rl_videos"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="match_parent"
+                                 android:layout_alignParentLeft="true"
+                                 android:layout_marginLeft="10dp"
+                                 android:padding="5dp">
+
+                                 <TextView
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="match_parent"
+                                     android:text="Videos (s) :"
+                                     android:textAllCaps="true"
+                                     android:textColor="@color/bluecolor"
+                                     android:textSize="15sp"
+                                     android:textStyle="bold" />
+
+                             </RelativeLayout>
+                             &lt;!&ndash;only name (End)&ndash;&gt;
+
+                             &lt;!&ndash;only user name (Start)&ndash;&gt;
+                             <RelativeLayout
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginBottom="5dp"
+                                 android:layout_marginEnd="10dp"
+                                 android:layout_marginRight="10dp"
+                                 android:layout_toEndOf="@id/rl_videos"
+                                 android:layout_toRightOf="@id/rl_videos"
+                                 android:padding="5dp">
+
+                                 <ImageView
+                                     android:id="@+id/iv_videos1"
+                                     android:layout_width="60dp"
+                                     android:layout_height="60dp"
+                                     android:layout_alignParentEnd="true"
+                                     android:layout_alignParentRight="true"
+                                     android:background="@drawable/ic_add_video" />
+
+                                 &lt;!&ndash; <ImageView
+                                      android:id="@+id/iv_videos2"
+                                      android:layout_width="60dp"
+                                      android:layout_height="60dp"
+                               `       android:layout_marginRight="5dp"
+                                      android:layout_toLeftOf="@id/iv_videos1"
+                                      android:background="@drawable/ic_f" />&ndash;&gt;
+
+                                 <VideoView
+                                     android:id="@+id/iv_videos2"
+                                     android:layout_width="60dp"
+                                     android:layout_height="60dp"
+                                     android:layout_marginRight="5dp"
+                                     android:layout_toLeftOf="@id/iv_videos1" />
+
+                                 <VideoView
+                                     android:id="@+id/iv_videos3"
+                                     android:layout_width="60dp"
+                                     android:layout_height="60dp"
+                                     android:layout_marginRight="5dp"
+                                     android:layout_toLeftOf="@id/iv_videos2" />
+
+                                 &lt;!&ndash;<TextView
+                                     android:id="@+id/tv_videos"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:layout_alignParentRight="true"
+                                     android:gravity="left"
+                                     android:text="wwww.technorizen.com\n career@technorizen.com"
+                                     android:textColor="@color/textuser"
+                                     android:textSize="13sp" />&ndash;&gt;
+
+                             </RelativeLayout>
+                             &lt;!&ndash;only user name (End)&ndash;&gt;
+
+                         </RelativeLayout>-->
+                        <!--Relative layout videos (End)-->
+
+                        <!--Relative layout for Thought (Start)-->
+                        <RelativeLayout
+                            android:id="@+id/rl_thought"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/website"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_thought"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:ellipsize="end"
+                                android:lines="2"
+                                android:text="User Thought"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+                        <!--Relative layout for Thought (End)-->
+
+                        <!--Relative layout blank (Start)-->
+                        <RelativeLayout
+                            android:id="@+id/rl_blank"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_below="@id/rl_thought"
+                            android:layout_marginTop="10dp">
+
+                        </RelativeLayout>
+                        <!--Relative layout blank (End)-->
+
+                    </RelativeLayout>
+                    <!--Relaout layout for main scroll (End)-->
+
+                    <!--</ScrollView>-->
+                    <!--Scroll view for user detail (End)-->
+                </LinearLayout>
+
+            </RelativeLayout>
+            <!--Relative layout main content (Start)-->
+
+        </ScrollView>
+
+    </LinearLayout>
+    <!-- End -->
+</FrameLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/paypal_dialog_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_main_quick_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_banner_quick_tip"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/dialog_textview"
+                android:gravity="center"
+                android:text="Quick Tip!"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_paypalid"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/rl_banner_quick_tip"
+            android:layout_margin="5dp"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_joint_id"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="TipMe ID :"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/edt_joint_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/tv_joint_id"
+                android:layout_toRightOf="@id/tv_joint_id"
+                android:digits="1234567890"
+                android:hint="Enter TipMe ID"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout xmlns:CurrencyTextBox="http://schemas.android.com/tools"
+            android:id="@+id/rl_paypalamout_quick_tip"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_paypalid"
+            android:layout_margin="5dp"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:padding="5dp">
+
+
+            <TextView
+                android:id="@+id/tv_tip_amout"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Amout :"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+
+            <com.blackcat.currencyedittext.CurrencyEditText
+                android:id="@+id/edt_tip_amout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/tv_tip_amout"
+                android:layout_toRightOf="@id/tv_tip_amout"
+                CurrencyTextBox:enable_default_hint="false"
+                app:allow_negative_values="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_quick_tip_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_paypalamout_quick_tip"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp">
+
+
+            <!--<mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btn_quick_tip_cancel"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:padding="5dp"
+                fancy:fb_borderColor="#FFFFFF"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="#ff5f69"
+                fancy:fb_focusColor="#ff838b"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="Cancel"
+                fancy:fb_textColor="#FFFFFF" />-->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/btn_quick_tip_cancel"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/dialog_quick_cancle_defaultColor"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="10dp">
+
+                <TextView
+                    android:id="@+id/tv_cancle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Cancel"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+            </android.support.v7.widget.CardView>
+
+
+            <!--<mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btn_quick_tip_done"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                fancy:fb_borderColor="#FFFFFF"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="#0cb600"
+                fancy:fb_focusColor="#0f9305"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="Done"
+                fancy:fb_textColor="#FFFFFF" />-->
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/btn_quick_tip_done"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/dialog_quick_done_focusColor"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="10dp">
+
+                <TextView
+                    android:id="@+id/tv_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Done"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="pv_circular_colors">
+        <item>@style/LightColorCircularProgressView</item>
+        <item>@style/DarkColorCircularProgressView</item>
+    </array>
+</resources>

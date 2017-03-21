@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <!--Main Relative Layout (Start)-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <!--Relative layout for  textview of sign in (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_twSignin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_logo_joint" />
+            </RelativeLayout>
+            <!--Relative layout for  textview of sign in (End)-->
+
+            <!--Relative layout for textview of username and password (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_edUser_edPass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_twSignin"
+                android:layout_marginTop="50dp">
+
+                <!--Edittext for username (Start)-->
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/rounded_rectangle_white"
+                    android:hint="Name"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10sp"
+                    android:singleLine="true"
+                    android:textColor="#8e8c8c"
+                    android:textColorHint="#8e8c8c" />
+                <!--Edittext for username (End)-->
+
+                <!--Edittext for Address (Start)-->
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/et_name"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rectangle_white"
+                    android:hint="Address"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10sp"
+                    android:singleLine="true"
+                    android:textColor="#8e8c8c"
+                    android:textColorHint="#8e8c8c" />
+                <!--Edittext for Address (End)-->
+
+                <!--Edittext for Email Address (Start)-->
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/et_address"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rectangle_white"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10sp"
+                    android:singleLine="true"
+                    android:textColor="#8e8c8c"
+                    android:textColorHint="#8e8c8c" />
+                <!--Edittext for Email Address (End)-->
+
+                <!--Edittext for Mobile (Start)-->
+                <EditText
+                    android:id="@+id/et_mobile"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/et_email"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rectangle_white"
+                    android:hint="Mobile"
+                    android:inputType="number"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10sp"
+                    android:singleLine="true"
+                    android:textColor="#8e8c8c"
+                    android:textColorHint="#8e8c8c" />
+                <!--Edittext for Mobile (End)-->
+
+                <!--Edittext for Line of Work (Start)-->
+                <EditText
+                    android:id="@+id/et_lineofwork"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/et_mobile"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rectangle_white"
+                    android:hint="Line of Work"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10sp"
+                    android:singleLine="true"
+                    android:textColor="#8e8c8c"
+                    android:textColorHint="#8e8c8c" />
+                <!--Edittext for Line of Work (End)-->
+
+                <!--Edittext for Line of Work (Start)-->
+                <EditText
+                    android:id="@+id/et_paypalid"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/et_lineofwork"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rectangle_white"
+                    android:hint="Your PayPal ID"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10sp"
+                    android:singleLine="true"
+                    android:textColor="#8e8c8c"
+                    android:textColorHint="#8e8c8c" />
+                <!--Edittext for Line of Work (End)-->
+
+                <!--Edittext for Line of Work (Start)-->
+                <EditText
+                    android:id="@+id/et_confirm_paypalid"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/et_paypalid"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rectangle_white"
+                    android:hint="Confirm PayPal ID"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10sp"
+                    android:singleLine="true"
+                    android:textColor="#8e8c8c"
+                    android:textColorHint="#8e8c8c" />
+                <!--Edittext for Line of Work (End)-->
+
+                <!--Edittext for TipMe id (Start)-->
+                <!--<EditText
+                    android:id="@+id/et_tipmeid"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/et_lineofwork"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rectangle_white"
+                    android:hint="TipMe id"
+                    android:inputType="number"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10sp"
+                    android:singleLine="true"
+                    android:textColor="#8e8c8c"
+                    android:textColorHint="#8e8c8c" />-->
+                <!--Edittext for TipMe id (End)-->
+
+                <!--Edittext for Password (Start)-->
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/et_confirm_paypalid"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rectangle_white"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10sp"
+                    android:singleLine="true"
+                    android:textColor="#8e8c8c"
+                    android:textColorHint="#8e8c8c" />
+                <!--Edittext for Password (End)-->
+
+                <!--Edittext for confirm Password (Start)-->
+                <EditText
+                    android:id="@+id/et_repassword"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/et_password"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rectangle_white"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10sp"
+                    android:singleLine="true"
+                    android:textColor="#8e8c8c"
+                    android:textColorHint="#8e8c8c" />
+                <!--Edittext for confirm Password (End)-->
+
+            </RelativeLayout>
+            <!--Relative layout for textview of username and password (End)-->
+
+            <!-- Relative layout for Button of login (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_btn_register"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_edUser_edPass"
+                android:layout_marginTop="30dp">
+
+                <!-- Register button (Start)-->
+                <Button
+                    android:id="@+id/btn_register"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/rounded_rectangle_blue"
+                    android:elevation="20dp"
+                    android:text="Register"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp" />
+                <!-- Register button (End)-->
+            </RelativeLayout>
+            <!-- Relative layout for Button of login (End)-->
+
+            <!-- Blank Bottom Space Relative layout (End)-->
+            <RelativeLayout
+                android:id="@+id/rl_blank"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/rl_btn_register">
+
+            </RelativeLayout>
+            <!-- Blank Bottom Space Relative layout (Start)-->
+
+        </RelativeLayout>
+        <!--Main Relative Layout (End)-->
+
+    </ScrollView>
+
+</RelativeLayout>

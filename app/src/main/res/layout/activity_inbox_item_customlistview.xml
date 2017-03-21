@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp">
+
+    <!--http://www.tutorialsbuzz.com/2014/03/watsapp-custom-listview-imageview-textview-baseadapter.html-->
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--relative layout for left side (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_profileimage"
+            android:layout_width="70dp"
+            android:layout_height="70dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp" />
+
+        </RelativeLayout>
+        <!--relative layout for left side (End)-->
+
+        <!--relative layout for user detail (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_userdetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/rl_profileimage">
+
+            <!--relative layout for user name (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/member_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="80dp"
+                    android:ellipsize="end"
+                    android:ems="3"
+                    android:lines="1"
+                    android:textColor="@color/textblack"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+            <!--relative layout for user name (End)-->
+
+            <!--relative layout for card user name (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_usercard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_username"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/tv_usercard"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="70dp"
+                    android:ellipsize="end"
+                    android:ems="3"
+                    android:lines="1"
+                    android:textColor="@color/textblack"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+            <!--relative layout for card user name (End)-->
+
+            <!--relative layout for user status (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_userstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_usercard"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:ems="3"
+                    android:lines="2"
+                    android:textColor="@color/textuser"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+            <!--relative layout for user status (End)-->
+
+        </RelativeLayout>
+        <!--relative layout for user detail (End)-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_contacttype"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp">
+
+        <!--text view for time (Start)-->
+        <TextView
+            android:id="@+id/contact_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/right_arrow"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+        <!--text view for time (End)-->
+
+    </RelativeLayout>
+
+    <!--text view for time (Start)-->
+    <!--text view for time (End)-->
+
+
+    <!--  <RelativeLayout
+          android:id="@+id/rl_userimage"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_margin="5dp">
+
+          <de.hdodenhof.circleimageview.CircleImageView
+              android:id="@+id/icon"
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:contentDescription="image"
+              android:padding="5dp"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp" />
+
+      </RelativeLayout>
+
+
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:layout_toRightOf="@id/rl_userimage"
+          android:gravity="left">
+
+
+          <TextView
+              android:id="@+id/title"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:ellipsize="end"
+              android:ems="3"
+              android:lines="1"
+              android:paddingBottom="10dp"
+              android:paddingLeft="10dp"
+              android:textColor="#CC0033"
+              android:textSize="16dp" />
+
+          <TextView
+              android:id="@+id/desc"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/title"
+              android:layout_marginTop="10dp"
+              android:ellipsize="end"
+              android:ems="3"
+              android:lines="3"
+              android:paddingLeft="10dp"
+              android:textColor="#3399FF"
+              android:textSize="14dp" />
+
+      </RelativeLayout>
+  -->
+
+</RelativeLayout>

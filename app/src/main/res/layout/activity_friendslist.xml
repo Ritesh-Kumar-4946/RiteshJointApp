@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Right or left Menu Panel -->
+
+    <FrameLayout
+        android:id="@+id/menuPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/slidingPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:gravity="left"
+        android:orientation="vertical">
+
+        <!--toolbar (Start)-->
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bluecolor">
+
+            <!--layout for left menu (start)-->
+            <RelativeLayout
+                android:id="@+id/rl_leftmenu"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/menuViewButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:src="@drawable/ic_leftmenu_open" />
+
+            </RelativeLayout>
+            <!--layout for left menu (End)-->
+
+            <!--layout for testimonies (start)-->
+            <RelativeLayout
+                android:id="@+id/rl_testimonies"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="Friends"
+                    android:textColor="@color/textcolor"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+            <!--layout for testimonies (End)-->
+
+        </RelativeLayout>
+        <!--toolbar (End)-->
+
+        <ListView
+            android:id="@+id/list"
+            android:clickable="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:smoothScrollbar="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!--progressbar for cover image (Start)-->
+    <RelativeLayout
+        android:id="@+id/rl_alldataupdateprogressbar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical|center_horizontal">
+
+        <ProgressBar
+            android:id="@+id/alldataupdateprogressbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:indeterminate="true"
+            android:progressDrawable="@drawable/circular_progress_bar" />
+    </RelativeLayout>
+    <!--progressbar for cover image (End)-->
+
+</FrameLayout>

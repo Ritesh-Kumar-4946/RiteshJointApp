@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Right or left Menu Panel -->
+
+    <FrameLayout
+        android:id="@+id/menuPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/slidingPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:gravity="left"
+        android:orientation="vertical">
+
+        <!--toolbar (Start)-->
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bluecolor">
+
+            <!--layout for left menu (start)-->
+            <RelativeLayout
+                android:id="@+id/rl_leftmenu"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/menuViewButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:src="@drawable/ic_leftmenu_open" />
+
+            </RelativeLayout>
+            <!--layout for left menu (End)-->
+
+            <!--layout for Right like Button (start)-->
+            <RelativeLayout
+                android:id="@+id/rl_rightlike"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp">
+
+                <!--<ImageView
+                    android:id="@+id/likebutton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:src="@drawable/ic_search" />-->
+
+                <SearchView
+                    android:background="@drawable/ic_search"
+                    android:goIcon="@drawable/ic_search"
+                    android:id="@+id/likebutton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                </SearchView>
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/likebutton"
+                    android:text="like 600"
+                    android:textColor="@color/textcolor"
+                    android:textSize="10sp" />-->
+
+            </RelativeLayout>
+            <!--layout for Right like Button (End)-->
+
+        </RelativeLayout>
+        <!--toolbar (End)-->
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header" />
+
+    </LinearLayout>
+
+</FrameLayout>

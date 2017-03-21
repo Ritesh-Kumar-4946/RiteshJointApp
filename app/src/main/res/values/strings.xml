@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">JointApp</string>
+    <string name="tryAgain">TRY AGAIN</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="menu_title">MENU</string>
+    <string name="menu_title1">MENU12</string>
+
+    <string name="item_1">Item 1</string>
+    <string name="item_2">Item 2</string>
+
+    <string name="description">Description</string>
+    <string name="cheese_ipsum">Jarlsberg lancashire edam. Dolcelatte hard cheese brie st. agur blue
+    cheese caerphilly bavarian bergkase cheese and biscuits mascarpone. Cheeseburger swiss bavarian
+    bergkase cream cheese fromage frais cheesy feet port-salut airedale. St. agur blue cheese rubber
+    cheese caerphilly cheddar cheesecake cream cheese manchego lancashire. Roquefort squirty cheese
+    the big cheese.</string>
+
+    <string name="show_all_content">Show all content</string>
+    <string name="show_less_content">Show less content</string>
+
+    <string name="default_media_location_folder">joint</string>
+
+    <!-- Names -->
+    <!--<string-array name="Member_names">
+        <item>Pavan D</item>
+        <item>DayaSagar</item>
+        <item>Pavan B</item>
+        <item>Maddy</item>
+        <item>Pavan H</item>
+        <item>Nikhil</item>
+        <item>Pavan B</item>
+        <item>Maddy</item>
+        <item>Pavan H</item>
+        <item>Nikhil</item>
+    </string-array>-->
+
+    <!-- Pictures -->
+    <!-- <array name="profile_pics">
+         <item>@drawable/ic_a</item>
+         <item>@drawable/ic_b</item>
+         <item>@drawable/ic_c</item>
+         <item>@drawable/ic_d</item>
+         <item>@drawable/ic_e</item>
+         <item>@drawable/ic_f</item>
+         <item>@drawable/ic_g</item>
+         <item>@drawable/ic_h</item>
+         <item>@drawable/ic_i</item>
+         <item>@drawable/ic_j</item>
+     </array>-->
+
+    <!-- contact type -->
+    <!-- <string-array name="contactType">
+         <item>12:45 AM</item>
+         <item>12:45 AM</item>
+         <item>12:45 AM</item>
+         <item>12:45 AM</item>
+         <item>12:45 AM</item>
+         <item>12:45 AM</item>
+         <item>12:45 AM</item>
+         <item>12:45 AM</item>
+         <item>12:45 AM</item>
+         <item>12:45 AM</item>
+     </string-array>-->
+
+    <!-- Status -->
+    <!--<string-array name="statues">
+        <item>@string/cheese_ipsum</item>
+        <item>@string/cheese_ipsum</item>
+        <item>@string/cheese_ipsum</item>
+        <item>@string/cheese_ipsum</item>
+        <item>@string/cheese_ipsum</item>
+        <item>@string/cheese_ipsum</item>
+        <item>@string/cheese_ipsum</item>
+        <item>@string/cheese_ipsum</item>
+        <item>@string/cheese_ipsum</item>
+        <item>@string/cheese_ipsum</item>
+    </string-array>-->
+
+</resources>

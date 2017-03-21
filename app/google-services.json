@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "170514449023",
+    "firebase_url": "https://joint-1802b.firebaseio.com",
+    "project_id": "joint-1802b",
+    "storage_bucket": "joint-1802b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170514449023:android:b0df90e993fbf54f",
+        "android_client_info": {
+          "package_name": "com.example.ritesh.jointapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170514449023-nca2btgmi3v9h7hcrbv595k7j3ttsep1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPZ57rU_XgQC2fvTOTwRrtZPZhu6mtoTU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170514449023-nca2btgmi3v9h7hcrbv595k7j3ttsep1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bluecolor">
+
+    <!-- Main Left Menu Layout (Start)-->
+    <RelativeLayout
+        android:id="@+id/fmyslidedrawerrelay"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <!--drawer header layout (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_dr_background"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/bluecolor">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent">
+
+                <!--Profile image (Start)-->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_avtar_f"
+                    android:background="@drawable/ic_o"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"/>
+                <!--Profile image (End)-->
+
+                <!--progressbar for profile image (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_profileprogressbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp">
+
+                    <ProgressBar
+                        android:id="@+id/profileprogressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progressDrawable="@drawable/circular_progress_bar" />
+
+                </RelativeLayout>
+                <!--progressbar for profile image (End)-->
+
+                <!--Profile Name text (Start)-->
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profileimg"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="2dp"
+                    android:text="Hollywood Actoress"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp" />
+                <!--Profile Name text (End)-->
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <!--drawer header layout (End)-->
+
+        <!--drawer List Item layout (Start)-->
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/rl_dr_background">
+
+            <!--Main relative layout for Drawer (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_item_main"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <!--rl dashboard (Start)-->
+                <RelativeLayout
+                    android:id="@+id/r2_dashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <RelativeLayout
+                        android:id="@+id/iv_dashboard"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/dashboard"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:src="@drawable/ic_dashboard" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_dashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/iv_dashboard"
+                        android:text="Dashboard"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+                <!--rl dashboard (End)-->
+
+                <!--rl inbox (Start)-->
+                <RelativeLayout
+                    android:id="@+id/r3_inbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/r2_dashboard">
+
+                    <RelativeLayout
+                        android:id="@+id/iv_inbox"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/inbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:src="@drawable/ic_inbox" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_inbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/iv_inbox"
+                        android:text="Inbox"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+                <!--rl inbox (End)-->
+
+                <!--rl notification (Star)-->
+                <RelativeLayout
+                    android:id="@+id/r4_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/r3_inbox">
+
+                    <RelativeLayout
+                        android:id="@+id/iv_notification"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/notification"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:src="@drawable/ic_notification" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/iv_notification"
+                        android:text="Notifications"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+                <!--rl notification (End)-->
+
+                <!--rl favorities (Start)-->
+                <RelativeLayout
+                    android:id="@+id/r5_favorities"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/r4_notification">
+
+                    <RelativeLayout
+                        android:id="@+id/iv_favorities"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/favorities"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:src="@drawable/ic_favorites" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_favorities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/iv_favorities"
+                        android:text="Favorites"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+                <!--rl favorities (End)-->
+
+                <!--rl browsejoints (Start)-->
+                <RelativeLayout
+                    android:id="@+id/r6_browsejoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/r5_favorities">
+
+                    <RelativeLayout
+                        android:id="@+id/iv_browsejoints"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/browsejoints"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:src="@drawable/ic_browsejoints" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/r6_browseJoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/iv_browsejoints"
+                        android:text="Browse Joints"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+                <!--rl browsetipmees (End)-->
+
+                <!--rl testimonies (Start)-->
+                <RelativeLayout
+                    android:id="@+id/r7_testimonies"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/r6_browsejoints">
+
+                    <RelativeLayout
+                        android:id="@+id/iv_testimonies"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/testimonies"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:src="@drawable/ic_testimonies" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_testimonies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/iv_testimonies"
+                        android:text="Testimonies"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+                <!--rl testimonies (End)-->
+
+                <!--rl profile (Start)-->
+                <RelativeLayout
+                    android:id="@+id/r8_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/r7_testimonies">
+
+                    <RelativeLayout
+                        android:id="@+id/iv_profile"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:src="@drawable/ic_profile" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/iv_profile"
+                        android:text="Profile"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+                <!--rl profile (End)-->
+
+                <!--rl currentproject (Start)-->
+                <RelativeLayout
+                    android:id="@+id/r9_currentproject"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/r8_profile">
+
+                    <RelativeLayout
+                        android:id="@+id/iv_currentproject"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/currentproject"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:src="@drawable/ic_currentproject" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_currentproject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/iv_currentproject"
+                        android:text="Current Project"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+                <!--rl currentproject (End)-->
+
+                <!--rl logout (Start)-->
+                <RelativeLayout
+                    android:id="@+id/r10_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/r9_currentproject">
+                        android:background="@color/textcolor"/>
+
+                    <RelativeLayout
+                        android:id="@+id/iv_logout"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/logout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:src="@drawable/ic_logout" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/iv_logout"
+                        android:text="Logout"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+                <!--rl logout (End)-->
+
+            </RelativeLayout>
+            <!--Main relative layout for Drawer (End)-->
+        </ScrollView>
+        <!--drawer List Item layout (End)-->
+
+    </RelativeLayout>
+    <!-- Main Left Menu Layout  (End)-->
+
+</RelativeLayout>

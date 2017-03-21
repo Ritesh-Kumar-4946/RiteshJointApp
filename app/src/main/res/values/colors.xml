@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#192676</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccentt">#6bcbff</color>
+    <color name="colorred">#ed5252</color>
+    <color name="rederrorboundry">#a12222</color>
+    <color name="rederrorfill">#ea0a0a</color>
+    <color name="greendoneboundry">#2f8114</color>
+    <color name="greendonefill">#41f106</color>
+
+    <color name="bluecolor">#36369f</color>
+    <color name="bluecolor_quick_tip">#4250A1</color>
+    <color name="textcolor">#ffffff</color>
+    <color name="highlyrecommended">#f59709</color>
+    <color name="textblack">#000000</color>
+    <color name="textuser">#FF646464</color>
+    <color name="circle_end">#ece10e</color>
+    <color name="circle_start">#ef8d03</color>
+    <color name="dots_primary">#d9710a</color>
+    <color name="dots_secondary">#eca156</color>
+    <color name="dialog_button">#ecb50e</color>
+
+
+
+    <color name="dialog_quick_cancle_defaultColor">#ff5f69</color>
+    <color name="dialog_quick_cancle_focusColor">#ff838b</color>
+    <color name="dialog_quick_done_defualtcolor">#0cb600</color>
+    <color name="dialog_quick_done_focusColor">#0f9305</color>
+
+
+
+
+
+
+
+    <array name="progress_colors_light">
+        <item>#FF03A9F4</item>
+        <item>#FFD8433C</item>
+        <item>#FFF2AF3A</item>
+        <item>#FF279B5E</item>
+    </array>
+
+    <array name="progress_colors_dark">
+        <item>#FF00E5FF</item>
+        <item>#ffd81d5a</item>
+        <item>#fff27512</item>
+        <item>#ff63bc34</item>
+    </array>
+
+    <array name="in_colors_light">
+        <item>#4B03A9F4</item>
+        <item>#3303A9F4</item>
+        <item>#1903A9F4</item>
+    </array>
+
+    <array name="in_colors_dark">
+        <item>#4B00E5FF</item>
+        <item>#3300E5FF</item>
+        <item>#1900E5FF</item>
+    </array>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--*************************************************************-->
+    <integer-array name="colors">
+        <item>@color/holo_blue_dark</item>
+        <item>@color/holo_yellow_dark</item>
+        <item>@color/holo_green_dark</item>
+        <item>@color/holo_purple_dark</item>
+        <item>@color/holo_red_dark</item>
+    </integer-array>
+
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+
+    <integer-array name="pocket_bar_colors">
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+    </integer-array>
+
+    <integer-array name="pocket_background_colors">
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_4</item>
+    </integer-array>
+
+    <color name="pocket_color_1">#85edb9</color>
+    <color name="pocket_color_2">#34bdb7</color>
+    <color name="pocket_color_3">#ee4458</color>
+    <color name="pocket_color_4">#fcb74d</color>
+
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#f4b400</color>
+    <color name="gplus_color_3">#427fed</color>
+    <color name="gplus_color_4">#b23424</color>
+
+    <color name="holo_blue_dark">#0099cc</color>
+    <color name="holo_yellow_dark">#ff8800</color>
+    <color name="holo_green_dark">#669900</color>
+    <color name="holo_purple_dark">#9933cc</color>
+    <color name="holo_red_dark">#cc0000</color>
+    <!--*************************************************************-->
+
+
+
+
+
+
+
+
+
+</resources>
